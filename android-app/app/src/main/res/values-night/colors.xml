@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#0F172A</color>
+    <color name="text_title">#F1F5F9</color>
+    <color name="text_subtitle">#94A3B8</color>
+    <color name="text_label">#CBD5E1</color>
+    <color name="bar_track">#334155</color>
+    <color name="btn_gray">#334155</color>
+    <color name="icon_gray">#E2E8F0</color>
+    <color name="key_bg">#334155</color>
+    <color name="control_track">#475569</color>
+    <color name="control_fill">#64748B</color>
+    <color name="control_thumb">#E2E8F0</color>
+    <color name="stick_base">#E2E8F0</color>
+    <color name="stick_knob">#475569</color>
+</resources>

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Android / IDE
+.idea/
+*.iml
+.gradle/
+build/
+local.properties
+.vscode/
+
+# Never commit signing keys or builds (put APKs in GitHub Releases)
+*.jks
+*.keystore
+*.apk
+*.aab
+
+# Local server data
+pc-server/password.json
+pc-server/data_folder/for_uploads/*
+pc-server/data_folder/for_downloads/*
+pc-server/data_folder/for_screenshots/*
+!pc-server/data_folder/*/.gitkeep

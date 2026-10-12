@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Thumbstick on the left, close / fullscreen / click on the right -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:text="Thumbstick" />
+
+                <com.example.appington_city.ThumbstickView
+                    android:id="@+id/thumbstick"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:text="close" />
+
+                <ImageButton
+                    android:id="@+id/closeButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Close program"
+                    android:src="@drawable/ic_close" />
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:layout_marginTop="28dp"
+                    android:text="Fullscreen" />
+
+                <ImageButton
+                    android:id="@+id/fullscreenButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Fullscreen"
+                    android:src="@drawable/ic_fullscreen" />
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:layout_marginTop="28dp"
+                    android:text="click" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/clickButton"
+                    style="@style/KeyButton"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:contentDescription="Left click"
+                    android:padding="0dp"
+                    android:text="L" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- rewind / pause / forward -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:text="rewind" />
+
+                <ImageButton
+                    android:id="@+id/rewindButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Rewind"
+                    android:src="@drawable/ic_rewind" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:text="pause" />
+
+                <ImageButton
+                    android:id="@+id/pauseButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Pause or play"
+                    android:src="@drawable/ic_next" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:text="forward" />
+
+                <ImageButton
+                    android:id="@+id/forwardButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Forward"
+                    android:src="@drawable/ic_forward" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- volume (left) and scroll (right) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:text="louder" />
+
+                <ImageButton
+                    android:id="@+id/soundUpButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Volume up"
+                    android:src="@drawable/ic_volume_up" />
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:layout_marginTop="28dp"
+                    android:text="quieter" />
+
+                <ImageButton
+                    android:id="@+id/soundDownButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Volume down"
+                    android:src="@drawable/ic_volume_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:text="scroll up" />
+
+                <ImageButton
+                    android:id="@+id/scrollUpButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Scroll up"
+                    android:src="@drawable/ic_arrow_up" />
+
+                <TextView
+                    style="@style/ControlLabel"
+                    android:layout_marginTop="28dp"
+                    android:text="scroll down" />
+
+                <ImageButton
+                    android:id="@+id/scrollDownButton"
+                    style="@style/ControlButton"
+                    android:contentDescription="Scroll down"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- streaming apps -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/netflixButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_gray"
+                android:contentDescription="Netflix"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_netflix" />
+
+            <ImageButton
+                android:id="@+id/disneyButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_gray"
+                android:contentDescription="Disney Plus"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_disney" />
+
+            <ImageButton
+                android:id="@+id/spotifyButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_gray"
+                android:contentDescription="Spotify"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_spotify" />
+
+            <ImageButton
+                android:id="@+id/youtubeButton"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_gray"
+                android:contentDescription="YouTube"
+                android:padding="6dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_youtube" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
